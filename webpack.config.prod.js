@@ -10,7 +10,7 @@ export default {
     noInfo: false,
     entry: {
         // vendor: path.resolve(__dirname, 'src/vendor'),
-        // main:
+        // main: path.resolve(__dirname, 'src/index')
         path.resolve(__dirname, 'src/index')
     },
     target: 'web',
@@ -68,8 +68,8 @@ export default {
             },
             {
                 test: /\.css$/,
-                // loader: ExtractTextPlugin.extract('css?sourceMap')
-                loader: ['style','css']
+                //loader: ExtractTextPlugin.extract('css?sourceMap')
+                loaders: ['style', 'css']
             }
         ]
     }
